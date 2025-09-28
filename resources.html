@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HealthBot - Resources</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fdfc;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #00695c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+.main {
+  max-width: 1000px;
+  margin: 3em auto;
+  padding: 2em;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.main h2 {
+  color: #00695c;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.main h3 {
+  color: #004d40;
+  margin-top: 2em;
+}
+
+.main p, .main ul li {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin-bottom: 0.8em;
+}
+
+.main ul {
+  margin-left: 1.5em;
+}
+
+.main a {
+  color: #00695c;
+  text-decoration: none;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+/* Resource Cards */
+.resource-card {
+  background: #e0f7f4;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 1em 0;
+}
+
+.resource-card i {
+  font-size: 1.5em;
+  color: #00695c;
+  margin-right: 0.5em;
+}
+
+/* Footer */
+footer {
+  background: #00695c;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .main {
+    padding: 1.5em;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-heart"></i> HealthBot</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="chat.html">Chat</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<section class="main">
+  <h2><i class="fa-solid fa-book-medical"></i> Health Resources</h2>
+  <p>Explore trusted sources and tools for health awareness, disease prevention, and AI-driven guidance. HealthBot compiles resources from top health organizations to ensure accurate and up-to-date information.</p>
+
+  <h3><i class="fa-solid fa-globe"></i> Global Health Organizations</h3>
+  <div class="resource-card">
+    <i class="fa-solid fa-hospital"></i> 
+    <strong>World Health Organization (WHO)</strong><br>
+    The WHO provides international guidance on health topics, disease outbreaks, vaccination programs, and health research.<br>
+    <a href="https://www.who.int" target="_blank">https://www.who.int</a>
+  </div>
+  <div class="resource-card">
+    <i class="fa-solid fa-virus"></i> 
+    <strong>Centers for Disease Control and Prevention (CDC)</strong><br>
+    CDC offers detailed information about infectious diseases, health promotion, and emergency preparedness.<br>
+    <a href="https://www.cdc.gov" target="_blank">https://www.cdc.gov</a>
+  </div>
+  <div class="resource-card">
+    <i class="fa-solid fa-stethoscope"></i> 
+    <strong>National Institutes of Health (NIH)</strong><br>
+    NIH provides access to medical research, health databases, and clinical trials.<br>
+    <a href="https://www.nih.gov" target="_blank">https://www.nih.gov</a>
+  </div>
+
+  <h3><i class="fa-solid fa-brain"></i> AI & Technology in Healthcare</h3>
+  <div class="resource-card">
+    <i class="fa-solid fa-robot"></i>
+    <strong>AI Health Tools</strong><br>
+    Explore AI applications in diagnostics, virtual healthcare assistants, and predictive models for disease prevention.<br>
+    <a href="#">Internal AI Guidelines</a>
+  </div>
+  <div class="resource-card">
+    <i class="fa-solid fa-laptop-medical"></i>
+    <strong>Medical AI Research</strong><br>
+    Academic and clinical research focused on AI-assisted diagnosis and health analytics.<br>
+    <a href="#">AI Research Papers</a>
+  </div>
+
+  <h3><i class="fa-solid fa-notes-medical"></i> Health Awareness Guides</h3>
+  <div class="resource-card">
+    <i class="fa-solid fa-file-medical"></i>
+    <strong>Disease Prevention</strong><br>
+    Guides on preventing infectious and non-infectious diseases, including vaccination schedules and hygiene practices.<br>
+    <a href="#">Prevention Resources</a>
+  </div>
+  <div class="resource-card">
+    <i class="fa-solid fa-hand-holding-medical"></i>
+    <strong>Self-Care & Wellness</strong><br>
+    Information on nutrition, mental health, fitness, and daily wellness practices.<br>
+    <a href="#">Wellness Guides</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 HealthBot | <i class="fa-solid fa-hand-holding-heart"></i> Caring with AI</p>
+</footer>
+
+</body>
+</html>

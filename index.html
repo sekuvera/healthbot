@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HealthBot - Home</title>
+  <!-- FontAwesome for medical symbols -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fdfc;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #00695c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3em 2em;
+      background: linear-gradient(120deg, #e0f7f4, #ffffff);
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 50%;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5em;
+      color: #004d40;
+    }
+
+    .hero-text p {
+      margin: 1em 0;
+      font-size: 1.2em;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #00695c;
+      color: white;
+      padding: 0.8em 1.5em;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #004d40;
+    }
+
+    .hero-img img {
+      max-width: 400px; /* Small image */
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Features */
+    .features {
+      text-align: center;
+      padding: 3em 2em;
+      background: #f1f8f6;
+    }
+
+    .features h2 {
+      font-size: 2em;
+      margin-bottom: 1.5em;
+      color: #00695c;
+    }
+
+    .feature-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      max-width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 2em;
+      color: #00695c;
+      margin-bottom: 0.5em;
+    }
+
+    .card h3 {
+      margin: 0.5em 0;
+      color: #004d40;
+    }
+
+    /* Footer */
+    footer {
+      background: #00695c;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text, .hero-img {
+        max-width: 100%;
+      }
+      .hero-text h1 {
+        font-size: 2.2em;
+      }
+      .hero-text p {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><i class="fa-solid fa-heart"></i> HealthBot</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="chat.html">Chat</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1><i class="fa-solid fa-hand-holding-heart"></i> AI-Driven Public Health Chatbot</h1>
+      <p>Your trusted assistant for disease awareness, prevention tips, and reliable health information.</p>
+      <a href="chat.html" class="btn"><i class="fa-solid fa-comment-medical"></i> Start Chat</a>
+    </div>
+    <div class="hero-img">
+      <!-- New medical AI illustration -->
+      <img src="https://www.addevice.io/storage/uploads/blog_post/meta_image/65c4f049cc860_Ai%20in%20Healthcare%20App%20Development%20-%201920-1080.png" alt="Medical AI" />
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2><i class="fa-solid fa-hand-holding-heart"></i> Why HealthBot?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h3>Health Awareness</h3>
+        <p>Understand symptoms, causes, and prevention strategies in a caring way.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-hands-holding-circle"></i>
+        <h3>Always Available</h3>
+        <p>24/7 support with AI-driven responses designed to help you anytime.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-hand-holding-medical"></i>
+        <h3>Trusted Guidance</h3>
+        <p>Information built on WHO, CDC, and global health experts’ guidelines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 HealthBot | <i class="fa-solid fa-hand-holding-heart"></i> Caring with AI</p>
+  </footer>
+</body>
+</html>
