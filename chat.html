@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HealthBot - Chat</title>
+  <title>HealthBot - Chat (Local)</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
@@ -87,7 +87,7 @@
 <body>
   <div class="chat-container">
     <div class="chat-header">
-      <i class="fa-solid fa-heart"></i> HealthBot - AI Assistant
+      <i class="fa-solid fa-heart"></i> HealthBot - AI Assistant (Local)
     </div>
     <div class="chat-box" id="chat-box"></div>
     <div class="chat-input">
@@ -100,6 +100,9 @@
     const chatBox = document.getElementById("chat-box");
     const userInput = document.getElementById("user-input");
 
+    // ⚠️ Put your OpenAI API key here for local testing only
+    const OPENAI_API_KEY = "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";
+
     async function sendMessage() {
       const message = userInput.value.trim();
       if (!message) return;
@@ -107,15 +110,22 @@
       addMessage("You: " + message, "user-message");
       userInput.value = "";
 
-      // Show typing message
       const typingMsg = addMessage("HealthBot is typing...", "bot-message");
 
       try {
-        // Replace with your Cloudflare Worker URL
-        const response = await fetch("https://workers-playground-plain-limit-aaf9.ricksonsahaya97.workers.dev/", {
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ messages: [{ role: "user", content: message }] })
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${OPENAI_API_KEY}`
+          },
+          body: JSON.stringify({
+            model: "gpt-4o-mini", // or gpt-4
+            messages: [
+              { role: "system", content: "You are HealthBot, a friendly AI assistant providing safe health awareness info. You do not give prescriptions." },
+              { role: "user", content: message }
+            ]
+          })
         });
 
         const data = await response.json();
@@ -142,8 +152,10 @@
       chatBox.scrollTop = chatBox.scrollHeight;
       return msg;
     }
+
+    userInput.addEventListener("keypress", function(e){
+      if(e.key === "Enter") sendMessage();
+    });
   </script>
 </body>
 </html>
-
-
